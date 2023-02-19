@@ -15,8 +15,8 @@ RUN apt-get update -qq && \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-RUN mkdir run/mysqld
-RUN touch run/mysqld/mysqld.sock
+RUN mkdir /var/run/mysqld
+RUN touch /var/run/mysqld/mysqld.sock
 RUN mkdir /myapp
 WORKDIR /myapp
 
